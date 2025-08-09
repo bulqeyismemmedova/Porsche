@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1300px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 py-8 text-gray-400 text-[11px]">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 py-8 text-gray-400 text-[11px]">
         <div>
           <h5 className="text-white font-medium mb-2 text-[16px]">Company & Support</h5>
           <ul className="space-y-2 texy-[13px]">
@@ -62,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="max-w-[1300px] mx-auto text-[11px] text-gray-400 leading-relaxed border-t border-[#333] pt-6">
+      <div className="container mx-auto text-[11px] text-gray-400 leading-relaxed border-t border-[#333] pt-6">
         <p className="mb-3">
           © 2025 Porsche Cars North America, Inc.{" "}
           <span className="underline">Legal notice</span>,{" "}
