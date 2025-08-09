@@ -1,0 +1,36 @@
+@import "tailwindcss";
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.bg_img{
+    background: url(https://content-hub.imgix.net/3aGYqB9XHdsJF89FlKD6L2/a472fffe611bcd634d3720b6095eb629/tins_hero_desktop.jpg?w=2064)center/cover;
+    height: 100vh;
+    width: 100%;
+}
+.homeLink{
+    font-family: 'Exo', 'Arial Narrow', Arial, 'Heiti SC', SimHei, sans-serif;
+    letter-spacing: 0.3rem;
+   
+}
+.bg_img_login{
+    background: url(https://assets.identity.porsche.com/img/background.webp)center/cover;
+}
+.bg_img_user{
+    background: url(https://images-porsche.imgix.net/-/media/447292DAE82940E09D7A1F9E520D9EAA_79FA32463294456AA27105003DF7466E_CM21N3KOX0004-718-cayman-gts-40-driving?fp-x=0.5&fp-y=0.5&w=2560&ar=28%3A9&q=85&crop=focalpoint&auto=format)center/cover;
+}
+.sound_bg{
+    background:url(https://images-porsche.imgix.net/-/media/00F3B65D32584C7BA7C4691C1F2C03B2_320EC6E9A09345C0A36BB62C92B71112_BX24I3HOX0018-718-spyder-rs-rear?w=479&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/00F3B65D32584C7BA7C4691C1F2C03B2_320EC6E9A09345C0A36BB62C92B71112_BX24I3HOX0018-718-spyder-rs-rear?w=479&q=45&dpr=2&auto=format%202x)center/cover;
+}
+.static_bg{
+    background: url(https://images-porsche.imgix.net/-/media/FA862A9335564D18971C507E3700FAE2_0198D9D8DD504A2EB911027CE5A3C321_BX24I3CID0012-25-en-connect?w=1343&ar=16%3A9&q=85&auto=format)center/cover;
+}
+.swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+    text-align: center;
+}
+.startShadow{
+    box-shadow: 0 0 5px gray;
+}
