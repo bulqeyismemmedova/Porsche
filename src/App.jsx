@@ -16,6 +16,7 @@ import Basket from './pages/Basket'
 import BuiltYourOwn from './pages/BuiltYourOwn'
 import Detail from './pages/Detail'
 import CarOwnBuilt from './pages/CarOwnBuilt'
+import Scroll from './components/Scroll'
 
 
 
@@ -26,8 +27,10 @@ function App() {
     <Toaster
   position="top-right"
   reverseOrder={false}/>
+  <Scroll/>
   
         <Routes>
+          
 
             <Route path='/' element={<MainLayouts/>}>
                 <Route index element={<Home/>}/>

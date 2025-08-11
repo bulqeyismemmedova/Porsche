@@ -49,53 +49,37 @@ const Header = () => {
           PORSCHE
         </NavLink>
       </div>
-      <div className="relative font-light mr-5 xl:mr-0">
-        <CiUser
-          onClick={() => setIsOpen(!isOpen)}
-          size={24}
-          className="cursor-pointer hover:text-neutral-700 transition"
-        />
-        {isOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 rounded-2xl bg-white border border-gray-200 shadow-xl z-50 overflow-hidden text-[15px] font-light tracking-wide">
-            {user?.email && (
-              <div className="px-4 py-3 text-neutral-700 text-xs uppercase bg-gray-50 border-b border-gray-200 font-medium">
-                {user.email}
-              </div>
-            )}
-            {user ? (
-              <>
-                <button
-                  onClick={() => navigate("register/profil")}
-                  className="w-full px-4 py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700"
-                >
-                  My Profile
-                </button>
-                <button
-                  onClick={handleLogOut}
-                  className="w-full px-4 py-3 text-left hover:bg-neutral-100 transition duration-200 text-red-500"
-                >
-                  <span className="tracking-wide">Log Out</span>
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  onClick={() => navigate("/register/signin")}
-                  className="w-full px-4 py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700"
-                >
-                  <span className="tracking-wide">Sign In</span>
-                </button>
-                <button
-                  onClick={() => navigate("/register/signup")}
-                  className="w-full px-4 py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700"
-                >
-                  <span className="tracking-wide">Sign Up</span>
-                </button>
-              </>
-            )}
-          </div>
-        )}
-      </div>
+      <div className="relative  font-light mr-5 xl:mr-0">
+  <CiUser onClick={() => setIsOpen(!isOpen)} size={24}  className="cursor-pointer hover:text-neutral-700 transition"/>
+  {isOpen && (
+    <div className="absolute top-full right-0 xl:left-1/2 xl:-translate-x-1/2 mt-2 w-30 sm:w-40 xl:w-40 rounded-lg xl:rounded-2xl bg-white border border-gray-200 shadow-xl z-50 overflow-hidden text-sm sm:text-[14px] font-light tracking-wide">
+      {user?.email && (
+        <div className="px-3 sm:px-4 py-2 sm:py-3 text-neutral-700 text-xs uppercase bg-gray-50 border-b border-gray-200 font-medium truncate">
+          {user.email}
+        </div>
+      )}
+      {user ? (
+        <>
+          <button onClick={() => navigate("register/profil")}  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700">
+            My Profile
+          </button>
+          <button  onClick={handleLogOut} className="w-full px-3 sm:px-4 py-2 sm:py-3 text-left hover:bg-neutral-100 transition duration-200 text-red-500">
+            <span className="tracking-wide">Log Out</span>
+          </button>
+        </>
+      ) : (
+        <>
+          <button onClick={() => navigate("/register/signin")} className="w-full px-3 sm:px-4 py-2 sm:py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700">
+            <span className="tracking-wide">Sign In</span>
+          </button>
+          <button onClick={() => navigate("/register/signup")} className="w-full px-3 sm:px-4 py-2 sm:py-3 text-left hover:bg-neutral-100 transition duration-200 text-gray-700">
+            <span className="tracking-wide">Sign Up</span>
+          </button>
+        </>
+      )}
+    </div>
+  )}
+</div>
     </div>
   </header>
 </>

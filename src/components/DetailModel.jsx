@@ -13,21 +13,17 @@ const PorscheModelSlider = ({ data, car }) => {
     const filtered = models.filter(item => item.bodyDesign === activeBody)
 
     return (
-        <div className="max-w-[1300px] mx-auto px-4 py-16">
+        <div className="container px-4 py-16">
 
             <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10">
                 Which {car.model} is the right one for you?
             </h2>
-            <div className="flex justify-center gap-6 mb-10 text-lg">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10 text-lg sm:text-xs">
                 {bodyTypes.map((body) => (
-                    <button
-                        key={body}
-                        onClick={() => setActiveBody(body)}
-                        className={`pb-1 border-b-2 transition-all ${activeBody === body
+                    <button key={body} onClick={() => setActiveBody(body)} className={`pb-1 border-b-2 w-fit transition-all ${activeBody === body
                                 ? "border-black font-semibold text-black"
                                 : "border-transparent text-gray-500 hover:text-black"
-                            }`}
-                    >
+                            }`}>
                         {body}
                     </button>
                 ))}

@@ -27,7 +27,7 @@ export default function SoundCar() {
           <h2 className="text-xl md:text-4xl font-semibold mb-5">
             It doesn't just sound good. It also feels good.
           </h2>
-          <p className="text-sm md:text-base mb-6">
+          <p className="text-sm md:text-base mb-3 md:mb-6">
             Experience the unique mid-engine sound of the 718 Cayman GTS 4.0.
           </p>
           <div className="flex items-center justify-center  md:mt-[200px]">

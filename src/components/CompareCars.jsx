@@ -73,7 +73,6 @@ const CompareCars = ({ firstCar, secondCar, setFirstCar, setSecondCar, sidebar, 
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="radio"
-                    name={`gear-${index}`}
                     checked={car?.gearType === 'PDK'}
                     onChange={() => handleGearChange(index, 'PDK')}
                   />
@@ -82,7 +81,6 @@ const CompareCars = ({ firstCar, secondCar, setFirstCar, setSecondCar, sidebar, 
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="radio"
-                    name={`gear-${index}`}
                     checked={car?.gearType === 'Manual'}
                     onChange={() => handleGearChange(index, 'Manual')}
                   />
@@ -314,7 +312,7 @@ const CompareCars = ({ firstCar, secondCar, setFirstCar, setSecondCar, sidebar, 
               <div className='bg-gray-100 rounded p-6'>
                 <h2 className="text-xl mb-10 font-semibold text-center">{car?.modelName}</h2>
                 <img src={car?.imgDetail1} alt={car?.modelName} className="mx-auto mb-6 max-h-[120px] object-contain" />
-                <audio controls loop controlsList="nodownload" className="w-full">
+                <audio controls  controlsList="nodownload" className="w-full">
                   <source src="https://ia902807.us.archive.org/12/items/car-engines/18%20Porsche%20911%20GT3.mp3" type="audio/mpeg" />
                 </audio>
               </div>
@@ -337,7 +335,6 @@ const CompareCars = ({ firstCar, secondCar, setFirstCar, setSecondCar, sidebar, 
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="radio"
-                      name={`gear-${index}`}
                       checked={car?.gearType === 'PDK'}
                       onChange={() => handleGearChange(index, 'PDK')}
                     />
@@ -346,7 +343,6 @@ const CompareCars = ({ firstCar, secondCar, setFirstCar, setSecondCar, sidebar, 
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="radio"
-                      name={`gear-${index}`}
                       checked={car?.gearType === 'Manual'}
                       onChange={() => handleGearChange(index, 'Manual')}
                     />
