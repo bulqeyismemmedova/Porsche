@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { CarsContext } from "../context/DataContext"
 import Loader from "../components/Loader"
 import Error from "../components/Error"
-import { AddBasket } from "../components/AddBasket"
+import { AddBasket } from "../components/Basket/AddBasket"
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
 

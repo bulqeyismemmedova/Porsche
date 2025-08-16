@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import ChooseCar from '../components/ChooseCar';
+import ChooseCar from '../components/Compare/ChooseCar';
 import { CarsContext } from '../context/DataContext';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import CompareCars from '../components/CompareCars';
+import CompareCars from '../components/Compare/CompareCars';
 
 const Compare = () => {
   const { data, error, loader } = useContext(CarsContext);

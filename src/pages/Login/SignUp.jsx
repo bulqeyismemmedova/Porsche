@@ -1,7 +1,7 @@
 import { useState } from "react"
 import toast from "react-hot-toast"
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
-import {userSignUP} from "../service/AuthService";
+import {userSignUP} from "../../service/AuthService";
 import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {

@@ -9,6 +9,15 @@ const getAllCars = async()=>{
     }
 }
 
+const getCarBulit = async()=>{
+    try {
+        const res = await carInstance.get(`/car`)
+        return res.data
+    } catch (error) {
+        console.error(error.message || "There is issue while fetching process" )
+    }
+}
+
 const getAllOther = async ()=>{
     try {
         const res = await carInstance.get(`/onlineShop`)
@@ -61,6 +70,7 @@ const deleteCarById = async (id)=>{
 
 export{
     getAllCars,
+    getCarBulit,
     getAllOther,
     getModel,
     createNewCar,

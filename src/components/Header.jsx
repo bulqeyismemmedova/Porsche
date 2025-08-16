@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CiUser } from "react-icons/ci";
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import SideBar from '../components/SideBar';
+import SideBar from './Home/SideBar';
 
 const Header = () => {
   const [user, setUser] = useState(null)

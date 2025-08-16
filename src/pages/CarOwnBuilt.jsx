@@ -208,7 +208,7 @@ const CarOwnBuilt = () => {
 
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="hidden lg:block w-72 flex-shrink-0">
-            <div className="sticky top-32 overflow-y-auto max-h-[calc(100vh-180px)]">
+            <div className=" top-32 overflow-y-auto ]">
               {renderFilters()}
             </div>
           </div>
@@ -246,9 +246,8 @@ const CarOwnBuilt = () => {
                             <p className="text-sm text-gray-700 mb-2">{car.topSpeed} mph</p>
                             <p className="text-xs text-gray-500 mb-3">{car.transmission.join(" · ")}</p>
                           </div>
-                          <button 
-                            className="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800 transition mt-auto"
-                          >
+                          <button onClick={()=>navigate("/carBuilt")}
+                            className="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800 transition mt-auto" >
                             Build Your Porsche
                           </button>
                         </div>

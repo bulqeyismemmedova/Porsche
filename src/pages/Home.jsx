@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import { CiSearch } from "react-icons/ci";
-import OnlineShop from '../components/OnlineShop';
+import OnlineShop from '../components/Home/OnlineShop';
 
 function Home() {
   const navigate = useNavigate()

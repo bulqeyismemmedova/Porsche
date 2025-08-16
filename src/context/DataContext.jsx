@@ -1,12 +1,13 @@
 import React, { Children, createContext, useState } from 'react'
 import { useEffect } from 'react'
-import { getAllCars, getAllOther, getModel } from '../service/CarService'
+import { getAllCars, getAllOther, getCarBulit, getModel } from '../service/CarService'
 
 export const CarsContext = createContext()
 
 const DataContext = ({children}) => {
     
    const [data, setData] = useState([])
+   const [car, setCar] = useState([])
    const [otherData, setOtherData] = useState([])
    const [model, setModel] = useState([])
    const [loader, setLoader] = useState(true)
@@ -29,11 +30,16 @@ const DataContext = ({children}) => {
         .then(item=>{
           setModel(item)
         })
+
+        getCarBulit()
+        .then(item=>{
+          setCar(item)
+        })
     },[])
 
-    // console.log(otherData);
+  
 
-    const obj = {data, setData, error, loader, model, otherData}
+    const obj = {data, car, setData, error, loader, model, otherData}
 
   return (
     <>

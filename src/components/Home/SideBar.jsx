@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { NavLink, useNavigate } from "react-router-dom";
-import { CarsContext } from "../context/DataContext";
+import { CarsContext } from "../../context/DataContext";
 
 const SideBar = ({ sideBar, setSideBar }) => {
   const menu = [

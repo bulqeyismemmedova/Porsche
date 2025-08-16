@@ -2,7 +2,7 @@ import { useState } from "react"
 import toast from "react-hot-toast"
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import { userLogin } from "../service/AuthService";
+import { userLogin } from "../../service/AuthService";
 
 export default function SignIn() { 
   const [user, setUser] = useState({

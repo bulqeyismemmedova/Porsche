@@ -4,12 +4,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import NotCar from '../components/NotCar';
 import Error from '../components/Error';
-import Slider from '../components/Slider';
+import Slider from '../components/Detail/Slider';
 import { PiCubeFocusThin } from "react-icons/pi";
-import Performance from '../components/Performance';
-import SoundCar from '../components/SoundCar';
-import DetailModel from '../components/DetailModel';
-import TechnicalSpecs from '../components/TechnicalSpecs';
+import Performance from '../components/Detail/Performance';
+import SoundCar from '../components/Detail/SoundCar';
+import DetailModel from '../components/Detail/DetailModel';
+import TechnicalSpecs from '../components/Detail/TechnicalSpecs';
 
 
 const Detail = () => {
