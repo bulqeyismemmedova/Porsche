@@ -5,6 +5,7 @@ import { Thumbs, FreeMode } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/thumbs"
 import "swiper/css/free-mode"
+import Scroll from "../components/Scroll"
 
 const CarBuilt = () => {
   const { car } = useContext(CarsContext)
@@ -67,6 +68,8 @@ const CarBuilt = () => {
   const totalPrice =defaultPrice + (selectedColor?.price || 0) + (selectedInterior?.price || 0) + (selectedWheel?.price || 0) +  (selectedWheelColor?.price || 0) +  (selectedWheelAccessory?.price || 0) + (selectedSeat?.price || 0)
 
   return (
+    <>
+    <Scroll/>
     <div className="mt-[100px] mb-[60px]">
       <div className="border my-10 border-gray-100"></div>
       <div className="container">
@@ -229,6 +232,7 @@ const CarBuilt = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
