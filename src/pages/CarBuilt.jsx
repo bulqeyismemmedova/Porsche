@@ -79,7 +79,7 @@ const CarBuilt = () => {
             <Swiper modules={[Thumbs]} thumbs={{ swiper: secontSwiper }} className="rounded-2xl object-cover max-h-full max-w-full" spaceBetween={10}>
               {(carImages.length > 0 ? carImages : [defaultImage]).map((img, i) => (
                 <SwiperSlide key={i}>
-                  <img src={img} alt={selectedColor?.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+                  <img src={img} alt={selectedColor?.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 " />
                 </SwiperSlide>
               ))}
             </Swiper>
