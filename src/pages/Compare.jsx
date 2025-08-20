@@ -4,6 +4,7 @@ import { CarsContext } from '../context/DataContext';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import CompareCars from '../components/Compare/CompareCars';
+import Scroll from '../components/Scroll';
 
 const Compare = () => {
   const { data, error, loader } = useContext(CarsContext);
@@ -16,6 +17,7 @@ const Compare = () => {
 
   return (
     <>
+    <Scroll/>
       <section className="">
         <div className='pt-[150px] pb-[50px] bg-gray-100 relative  px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40'>
         <div className="flex flex-col items-center max-w-3xl mx-auto text-center mb-14 px-4">

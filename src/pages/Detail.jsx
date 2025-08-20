@@ -10,6 +10,7 @@ import Performance from '../components/Detail/Performance';
 import SoundCar from '../components/Detail/SoundCar';
 import DetailModel from '../components/Detail/DetailModel';
 import TechnicalSpecs from '../components/Detail/TechnicalSpecs';
+import Scroll from '../components/Scroll';
 
 
 const Detail = () => {
@@ -46,6 +47,8 @@ const Detail = () => {
   }
 
   return (
+    <>
+    <Scroll/>
     <section className="min-h-screen font-sans bg-white overflow-hidden pb-10">
 
       <div className="border-b border-gray-300 w-full pt-[90px]" />
@@ -330,6 +333,7 @@ const Detail = () => {
 
 
     </section>
+    </>
   );
 };
 

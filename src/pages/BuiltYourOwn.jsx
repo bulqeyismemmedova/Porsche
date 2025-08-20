@@ -3,6 +3,7 @@ import { CarsContext } from '../context/DataContext'
 import Loader from "../components/Loader"
 import Error from "../components/Error"
 import { NavLink } from 'react-router-dom'
+import Scroll from '../components/Scroll'
 
 const BuiltYourOwn = () => {
   const { model, loader, error, data } = useContext(CarsContext)
@@ -38,6 +39,8 @@ const BuiltYourOwn = () => {
   })
 
   return (
+    <>
+    <Scroll/>
     <div className='bg-gray-100'>
       <section className="bg-gray-100 container mx-auto min-h-screen pt-[130px] px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Select a Model Line</h2>
@@ -113,6 +116,7 @@ const BuiltYourOwn = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

@@ -85,7 +85,7 @@ const CarBuilt = () => {
             </Swiper>
             <Swiper modules={[Thumbs, FreeMode]} onSwiper={setsecontSwiper} slidesPerView={8} spaceBetween={10} watchSlidesProgress freeMode={true} className="mt-4">
               {(carImages.length > 0 ? carImages : [defaultImage]).map((img, i) => (
-                <SwiperSlide key={i} className="!h-20">
+                <SwiperSlide key={i} className="!h-15">
                   <img src={img} alt="Thumbnail" className="w-full h-full object-contain rounded-lg cursor-pointer border-2 border-gray-200 hover:border-black transition" />
                 </SwiperSlide>
               ))}
@@ -190,6 +190,10 @@ const CarBuilt = () => {
             )}
             <div className="bg-gray-50 rounded-xl p-4 space-y-3">
               <p className="text-xl font-bold">Total Price: ${totalPrice}</p>
+              <div>
+              <p className="text-lg font-medium">Car Price: $75.400 </p>
+              <p className="text-gray-600">Deliver Price: $1.495 </p>
+              </div>
 
               {selectedColor && (
                 <div>

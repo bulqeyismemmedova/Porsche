@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { CarsContext } from '../context/DataContext'
 import Loader from '../components/Loader'
 import Error from '../components/Error'
@@ -10,6 +10,7 @@ const Model = () => {
   const { data, loader, error } = useContext(CarsContext)
   const { modelName } = useParams()
   const [filterOpen, setFilterOpen] = useState(false)
+  const navigator = useNavigate()
 
   const allModels = ['All', ...new Set(data.map(item => item.model))]
   const [selectedModel, setSelectedModel] = useState(modelName || 'All')
@@ -202,10 +203,7 @@ const Model = () => {
                     <h4 className="text-lg font-semibold mb-4">{variant}</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                       {carsInVariant.map(car => (
-                        <NavLink 
-                          to={`/models/${car.model}/${encodeURIComponent(car.modelName)}`} 
-                          key={car.id}
-                          className="hover:scale-[1.02] transition-transform duration-200"                        >
+                                            
                           <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md h-full flex flex-col">
                             <span className="text-xs bg-gray-100 px-2 py-1 rounded mb-2 w-fit">{car.fuelType}</span>
                             <img  src={car.imgDetail1}  alt={car.modelName}  className="h-32 sm:h-40 w-full object-contain mb-4"                            />
@@ -217,15 +215,15 @@ const Model = () => {
                               <p><b>{car.speed}</b> – Top Speed</p>
                             </div>
                             <div className="flex gap-2 mt-auto">
-                              <button className="bg-black text-white text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-gray-800 transition-colors">
+                              <button onClick={()=>navigator(`${`/models/${car.model}/${(car.modelName)}`}`)} className="bg-black text-white text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-gray-800 transition-colors">
                                 Select
                               </button>
-                              <button className="border border-black text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-gray-100 transition-colors">
+                              <button onClick={()=>navigator("/compare")} className="border border-black text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-gray-100 transition-colors">
                                 Compare
                               </button>
                             </div>
                           </div>
-                        </NavLink>
+                       
                       ))}
                     </div>
                   </div>

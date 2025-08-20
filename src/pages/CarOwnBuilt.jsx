@@ -6,6 +6,7 @@ import NotCar from '../components/NotCar'
 import { useNavigate, useParams } from 'react-router-dom'
 import { IoIosArrowRoundBack } from "react-icons/io"
 import { IoClose } from "react-icons/io5"
+import Scroll from '../components/Scroll'
 
 const FilterSection = ({ title, children }) => (
   <div>
@@ -167,6 +168,8 @@ const CarOwnBuilt = () => {
   )
 
   return (
+    <>
+    <Scroll/>
     <div className="bg-gray-100 min-h-screen">
       {mobileFilterOpen && (
         <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
@@ -261,6 +264,7 @@ const CarOwnBuilt = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
