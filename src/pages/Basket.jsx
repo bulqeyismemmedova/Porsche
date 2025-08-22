@@ -5,6 +5,7 @@ import Error from "../components/Error"
 import { AddBasket } from "../components/Basket/AddBasket"
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
+import Scroll from "../components/Scroll"
 
 const Basket = () => {
   const [car, setCar] = useState(null)
@@ -41,6 +42,7 @@ const Basket = () => {
 
   return (
     <>
+    <Scroll/>
       {car ? (
         <section className="bg-gray-100 ">
           <div className="container mx-auto py-[120px] md:pt-[150px] px-4 sm:px-6">
